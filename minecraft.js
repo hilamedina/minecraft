@@ -32,6 +32,7 @@ const materialObj = {
   ground: { className: 'ground', id: 4 },
   grass: { className: 'grass', id: 5 },
   cloud: { className: 'cloud', id: 6 },
+  sky: { className: 'sky' },
 };
 
 // runs on each row
@@ -62,6 +63,8 @@ gameBoardMatrix.forEach((row, yIndex) => {
       case 6:
         block.classList.add(materialObj.cloud.className);
         break;
+      default:
+        block.classList.add(materialObj.sky.className);
     }
     gameBoard.appendChild(block);
   });
@@ -105,17 +108,21 @@ gameBoard.addEventListener('click', (e) => {
   switch (myTools) {
     case 'shovel':
       if (shovelButton1.className.includes(e.target.className)) {
-        e.target.classList = '';
+        e.target.classList = 'sky';
       }
       break;
     case 'pickaxe':
       if (pickaxeButton2.className.includes(e.target.className)) {
-        e.target.classList = '';
+        e.target.classList = 'sky';
+      } else {
+        shovelButton1.style.background = 'red';
       }
       break;
     case 'axe':
       if (axeButton3.className.includes(e.target.className)) {
-        e.target.classList = '';
+        e.target.classList = 'sky';
+      } else {
+        axeButton3.style.background = 'red';
       }
       break;
   }

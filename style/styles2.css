@@ -9,7 +9,6 @@ body {
   }
   
   #game-board {
-    background-color: rgb(21, 147, 215);
     width: 100vmin;
     height: 100vmin;
     display: grid;
@@ -60,6 +59,10 @@ body {
   }
   .cloud {
     background-color: rgb(255, 255, 255);
+  }
+  
+  .sky{
+    background-color: rgb(21, 147, 215);
   }
   .button1{
     background: black;
