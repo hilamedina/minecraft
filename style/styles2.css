@@ -15,13 +15,12 @@ body {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(18, 1fr);
-    border:red 2px solid;
+
   }
   
   #tool-box {
     margin-left: 50px;
     background-color:black;
-    /* border:2px solid red;  */
     width: 20vmin;
     height: 40vmin;
     display: flex;
@@ -37,23 +36,27 @@ body {
 }
   
   .tree {
-    background: url("/images/css_sprites.png") -110px -110px;
+ background: url("/images/tree.jpeg");
   }
   
   .leaves {
-    background: url("/images/css_sprites.png") -210px -10px;
+    background: url("/images/grass.jpeg");
+    /* background: url("/images/css_sprites.png") -210px -10px; */
   }
   
   .rock {
-    background: url("/images/css_sprites.png") -10px -110px;
+    background: url("/images/rock.jpeg");
+    /* background: url("/images/css_sprites.png") -10px -110px; */
   }
   
   .ground {
-    background: url("/images/css_sprites.png") -110px -10px;
+    background: url("/images/ground.jpeg");
+    /* background: url("/images/css_sprites.png") -110px -10px; */
   }
   
   .grass {
-    background: url("/images/css_sprites.png") -10px -10px;
+    background: url("/images/grasswithgrass.jpeg");
+    /* background: url("/images/css_sprites.png") -10px -10px; */
   }
   .cloud {
     background-color: rgb(255, 255, 255);

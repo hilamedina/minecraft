@@ -19,7 +19,7 @@ const gameBoardMatrix = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
   [0, 0, 2, 2, 0, 0, 3, 3, 3, 0, 0, 0, 0, 1, 0, 0, 0, 0],
   [0, 0, 2, 2, 0, 0, 3, 3, 3, 0, 0, 0, 0, 1, 0, 0, 0, 0],
-  [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+  [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
   [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
   [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
   [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
@@ -67,9 +67,9 @@ gameBoardMatrix.forEach((row, yIndex) => {
   });
 });
 const objTools = {
-  axe: { className: ['tree', 'leaves'] },
-  pickaxe: { className: 'rock' },
   shovel: { className: ['ground', 'grass'] },
+  pickaxe: { className: 'rock' },
+  axe: { className: ['tree', 'leaves'] },
 };
 shovelButton1.classList.add(objTools.shovel.className);
 // console.log(shovelButton1.classList);
@@ -100,23 +100,23 @@ axeButton3.addEventListener('click', () => {
   pickaxeButton2.style.background = '';
   myTools = 'axe';
 });
-
+console.log(shovelButton1.className);
 gameBoard.addEventListener('click', (e) => {
   switch (myTools) {
     case 'shovel':
       if (shovelButton1.className.includes(e.target.className)) {
-        e.target.classList.remove('ground');
-        break;
+        e.target.classList = '';
       }
+      break;
     case 'pickaxe':
       if (pickaxeButton2.className.includes(e.target.className)) {
         e.target.classList = '';
-        break;
       }
+      break;
     case 'axe':
       if (axeButton3.className.includes(e.target.className)) {
         e.target.classList = '';
-        break;
       }
+      break;
   }
 });

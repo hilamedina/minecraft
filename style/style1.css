@@ -1,0 +1,33 @@
+body{
+    display:flex;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+    background:url("/images/open.jpg") center center / cover no-repeat;    
+}
+.minecraft{
+    display:flex;
+    justify-content: center;
+    margin-top:10%;
+}
+.logo{
+    width:35%;
+}
+.start{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10%;
+    width:10%;
+    margin-left:45%;
+    background-color: black;
+    border:none;
+    padding:15px;
+
+}
+.start .link-page{
+    color:white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
