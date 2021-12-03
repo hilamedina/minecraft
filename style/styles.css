@@ -15,12 +15,14 @@ body {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(18, 1fr);
+    border:red 2px solid;
   }
   
   #tool-box {
     margin-left: 50px;
-    background-color: rgb(204, 204, 204); 
-    width: 30vmin;
+    background-color:black;
+    border:2px solid red; 
+    width: 20vmin;
     height: 40vmin;
     display: flex;
     flex-direction: column;
@@ -35,24 +37,34 @@ body {
 }
   
   .tree {
-    background: url("/style/images/css_sprites.png") -110px -110px;
+    background: url("/images/css_sprites.png") -110px -110px;
   }
   
   .leaves {
-    background: url("/style/images/css_sprites.png") -210px -10px;
+    background: url("/images/css_sprites.png") -210px -10px;
   }
   
   .rock {
-    background: url("/style/images/css_sprites.png") -10px -110px;
+    background: url("/images/css_sprites.png") -10px -110px;
   }
   
   .ground {
-    background: url("/style/images/css_sprites.png") -110px -10px;
+    background: url("/images/css_sprites.png") -110px -10px;
   }
   
   .grass {
-    background: url("/style/images/css_sprites.png") -10px -10px;
+    background: url("/images/css_sprites.png") -10px -10px;
   }
   .cloud {
     background-color: rgb(255, 255, 255);
+  }
+  .button1{
+    background: url("/images/tool1.jpeg") center center / contain no-repeat;
+    width:50%; 
+    height:50%
+  }
+  .button2{
+    background: url("/images/tool2.jpeg") center center / contain no-repeat;
+    width:50%; 
+    height:50%
   }
