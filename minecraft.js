@@ -1,4 +1,7 @@
 const gameBoard = document.querySelector('#game-board');
+const shovelButton1 = document.querySelector('.button1');
+const pickaxeButton2 = document.querySelector('.button2');
+const axeButton3 = document.querySelector('.button3');
 
 const gameBoardMatrix = [
   //18*18
@@ -63,33 +66,57 @@ gameBoardMatrix.forEach((row, yIndex) => {
     gameBoard.appendChild(block);
   });
 });
+const objTools = {
+  axe: { className: ['tree', 'leaves'] },
+  pickaxe: { className: 'rock' },
+  shovel: { className: ['ground', 'grass'] },
+};
+shovelButton1.classList.add(objTools.shovel.className);
+// console.log(shovelButton1.classList);
+// console.log(shovelButton1.className);
 
-let isclick = false;
-let selectedtool = ' ';
-const button1 = document.querySelector('.button1');
-button1.addEventListener('click', () => {
-  isclick = true;
-  selectedtool = 'pickaxe';
+//we get in to the button classlist and we add class from the objtool obj
+pickaxeButton2.classList.add(objTools.pickaxe.className);
+axeButton3.classList.add(objTools.axe.className);
+
+let myTools = '';
+shovelButton1.addEventListener('click', () => {
+  myTools = 'shovel';
+  axeButton3.style.background = '';
+  shovelButton1.style.background = 'blue';
+  pickaxeButton2.style.background = '';
 });
 
-const button2 = document.querySelector('.button2');
-button2.addEventListener('click', () => {
-  isclick = true;
-  selectedtool = 'axe';
+pickaxeButton2.addEventListener('click', () => {
+  axeButton3.style.background = '';
+  shovelButton1.style.background = '';
+  pickaxeButton2.style.background = 'blue';
+  myTools = 'pickaxe';
 });
+
+axeButton3.addEventListener('click', () => {
+  axeButton3.style.background = 'blue';
+  shovelButton1.style.background = '';
+  pickaxeButton2.style.background = '';
+  myTools = 'axe';
+});
+
 gameBoard.addEventListener('click', (e) => {
-  console.log(e.target.classList.value);
-  console.log(selectedtool);
-  switch (selectedtool) {
-    case 'pickaxe':
-      // console.log('hila');
-      if (e.target.classList.value === 'rock') {
-        e.target.classList.remove('rock');
-      }
-      break;
-    case 'axe':
-      if (e.target.classList.value === 'ground') {
+  switch (myTools) {
+    case 'shovel':
+      if (shovelButton1.className.includes(e.target.className)) {
         e.target.classList.remove('ground');
+        break;
+      }
+    case 'pickaxe':
+      if (pickaxeButton2.className.includes(e.target.className)) {
+        e.target.classList = '';
+        break;
+      }
+    case 'axe':
+      if (axeButton3.className.includes(e.target.className)) {
+        e.target.classList = '';
+        break;
       }
   }
 });

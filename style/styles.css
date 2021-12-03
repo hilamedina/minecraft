@@ -21,7 +21,7 @@ body {
   #tool-box {
     margin-left: 50px;
     background-color:black;
-    border:2px solid red; 
+    /* border:2px solid red;  */
     width: 20vmin;
     height: 40vmin;
     display: flex;
@@ -59,12 +59,29 @@ body {
     background-color: rgb(255, 255, 255);
   }
   .button1{
-    background: url("/images/tool1.jpeg") center center / contain no-repeat;
+    background: black;
+    width:50%;
+    height:50%;
+  }
+  .button1 img{
+    width:70%;
+    height:80%;
+  }
+  .button2{
+    background: url("/images/pickaxe2\(1\).png") center center / contain no-repeat;
     width:50%; 
     height:50%
   }
-  .button2{
-    background: url("/images/tool2.jpeg") center center / contain no-repeat;
+  .button2 img{
+    width:70%;
+    height:80%;
+  }
+  .button3{
+    background: url("/images/axe2.png") center center / contain no-repeat;
     width:50%; 
     height:50%
+  }
+  .button3 img{
+    width:70%;
+    height:80%;
   }
