@@ -2,6 +2,7 @@ const gameBoard = document.querySelector('#game-board');
 const shovelButton1 = document.querySelector('.button1');
 const pickaxeButton2 = document.querySelector('.button2');
 const axeButton3 = document.querySelector('.button3');
+const holder = document.querySelector('.holder1');
 
 const gameBoardMatrix = [
   //18*18
@@ -109,23 +110,26 @@ axeButton3.addEventListener('click', () => {
 // console.log(shovelButton1.className);
 
 gameBoard.addEventListener('click', (e) => {
-  console.dir(e.target.className);
   switch (myTools) {
     case 'shovel':
       if (shovelButton1.className.includes(e.target.className)) {
-        console.log(e.target);
-        e.target.classList = 'sky';
-      }
-      break;
-    case 'pickaxe':
-      if (pickaxeButton2.className.includes(e.target.className)) {
+          holder.classList.add(e.target.className);
         e.target.classList = 'sky';
       } else {
         shovelButton1.style.background = 'red';
       }
       break;
+    case 'pickaxe':
+      if (pickaxeButton2.className.includes(e.target.className)) {
+        holder.classList.add(e.target.className);
+        e.target.classList = 'sky';
+      } else {
+        pickaxeButton2.style.background = 'red';
+      }
+      break;
     case 'axe':
       if (axeButton3.className.includes(e.target.className)) {
+        holder.classList.add(e.target.className);
         e.target.classList = 'sky';
       } else {
         axeButton3.style.background = 'red';

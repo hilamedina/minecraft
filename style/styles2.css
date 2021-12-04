@@ -23,7 +23,6 @@ body {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(18, 1fr);
-
   }
   
   #tool-box {
@@ -37,6 +36,36 @@ body {
     align-items: center;
 
   }
+   #blockHold{
+    width: 25vmin;
+    height: 100vmin; 
+    display:flex;
+    margin-left:10%;
+  } 
+   /* .next{
+    display:flex;
+     justify-content; 
+    align-items: center;
+    background-color: black;
+    border:none;
+    height:15px;
+    padding:20px;
+    color:white;
+    cursor: pointer;
+    font-family: "Minecraft", sans-serif;
+    font-size: 20px;
+    border:0.5px solid white;
+    border-radius: 15%;
+  }   */
+
+  .holder1{
+    width:15px;
+    height:30px;
+    padding:25px;
+    margin-bottom:15px;
+    border:red 2px solid;   
+  }
+
  .toolPhotoUL{
     list-style: none;
 } 
@@ -44,8 +73,7 @@ body {
   display:flex;
   flex-direction: column;
   align-items: center;
-  /* border:2px solid white; */
-  height:20%;
+  height:25%;
 
 }
 .photoText{
@@ -84,7 +112,7 @@ body {
     background-color: rgb(21, 147, 215);
   }
   .button1{
-  background: url('imgs/Tools-Sprite.png') no-repeat -595px -1px;
+  background:black;
 	width: 120px;
 	height: 120px;
   border:none;
@@ -94,10 +122,9 @@ body {
   .button1 img{
     width:80%;
     height:80%;
-  
   }
   .button2{
-  background: url('imgs/Tools-Sprite.png') no-repeat -174px -15px;
+  background:black;
 	width: 120px;
 	height: 120px;
   border:none;
@@ -116,7 +143,7 @@ body {
   height:80%;
   }
   .button3{
-    background: url('imgs/Tools-Sprite.png') no-repeat -595px -1px;
+    background:black;
     width: 120px;
     height: 120px;
     border:none;
@@ -125,5 +152,12 @@ body {
   }
   .button3 img{
     width:80%;
-    height:90%;
+    height:80%;
+  }
+  .text3{
+    font-size:20px;
+    color:white;
+    margin-left:40px;
+    font-family: "Minecraft", sans-serif;
+    margin-bottom:40px;;
   }
