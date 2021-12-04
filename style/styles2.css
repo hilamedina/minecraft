@@ -1,3 +1,12 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("http://fonts.cdnfonts.com/css/minecraft-4");
+
 body {
     height: 100vh;
     width: 100vw;
@@ -5,12 +14,12 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    background-color: black;
+    background-color:black;
   }
-  
+
   #game-board {
     width: 100vmin;
-    height: 100vmin;
+    height: 70vmin;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(18, 1fr);
@@ -20,20 +29,30 @@ body {
   #tool-box {
     margin-left: 50px;
     background-color:black;
-    width: 20vmin;
-    height: 40vmin;
+    width: 25vmin;
+    height: 100vmin;
     display: flex;
     flex-direction: column;
-  
+    justify-content:center;
+    align-items: center;
+
   }
-   .toolPhotoUL{
+ .toolPhotoUL{
     list-style: none;
 } 
-.toolphoto{
-  width:60px;
-  height:60px;
+.toolPhoto{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* border:2px solid white; */
+  height:20%;
+
 }
-  
+.photoText{
+  color:white;
+  font-size:25px;
+  margin-left:15px;
+}
   .tree {
  background: url("/images/tree.jpeg");
   }
@@ -65,29 +84,46 @@ body {
     background-color: rgb(21, 147, 215);
   }
   .button1{
-    background: black;
-    width:50%;
-    height:50%;
+  background: url('imgs/Tools-Sprite.png') no-repeat -595px -1px;
+	width: 120px;
+	height: 120px;
+  border:none;
+  display: flex;
+  flex-direction: column;
   }
   .button1 img{
-    width:70%;
+    width:80%;
     height:80%;
+  
   }
   .button2{
-    background: url("/images/pickaxe2\(1\).png") center center / contain no-repeat;
-    width:50%; 
-    height:50%
+  background: url('imgs/Tools-Sprite.png') no-repeat -174px -15px;
+	width: 120px;
+	height: 120px;
+  border:none;
+  display: flex;
+  flex-direction: column;
+  }
+  .text{
+    font-size: 20px;
+    color:white;
+    margin-left:23px;
+    font-family: "Minecraft", sans-serif;
+    margin-top:5px;
   }
   .button2 img{
-    width:70%;
-    height:80%;
+  width:80%;
+  height:80%;
   }
   .button3{
-    background: url("/images/axe2.png") center center / contain no-repeat;
-    width:50%; 
-    height:50%
+    background: url('imgs/Tools-Sprite.png') no-repeat -595px -1px;
+    width: 120px;
+    height: 120px;
+    border:none;
+    display: flex;
+    flex-direction: column;
   }
   .button3 img{
-    width:70%;
-    height:80%;
+    width:80%;
+    height:90%;
   }
