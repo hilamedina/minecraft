@@ -2,7 +2,7 @@ const gameBoard = document.querySelector('#game-board');
 const shovelButton1 = document.querySelector('.button1');
 const pickaxeButton2 = document.querySelector('.button2');
 const axeButton3 = document.querySelector('.button3');
-const holder = document.querySelector('.holder1');
+const holder = document.querySelector('#holder1');
 
 const gameBoardMatrix = [
   //18*18
@@ -113,7 +113,9 @@ gameBoard.addEventListener('click', (e) => {
   switch (myTools) {
     case 'shovel':
       if (shovelButton1.className.includes(e.target.className)) {
-          holder.classList.add(e.target.className);
+        holder.classList = ' ';
+        // holder.classList.add(e.target.className);
+        holder.setAttribute('class', e.target.className);
         e.target.classList = 'sky';
       } else {
         shovelButton1.style.background = 'red';
@@ -121,7 +123,8 @@ gameBoard.addEventListener('click', (e) => {
       break;
     case 'pickaxe':
       if (pickaxeButton2.className.includes(e.target.className)) {
-        holder.classList.add(e.target.className);
+        holder.classList = ' ';
+        holder.setAttribute('class', e.target.className);
         e.target.classList = 'sky';
       } else {
         pickaxeButton2.style.background = 'red';
@@ -129,7 +132,10 @@ gameBoard.addEventListener('click', (e) => {
       break;
     case 'axe':
       if (axeButton3.className.includes(e.target.className)) {
-        holder.classList.add(e.target.className);
+        holder.classList = ' ';
+        holder.setAttribute('class', e.target.className);
+        console.log(holder.classlist);
+        // holder.classList.add(e.target.className);
         e.target.classList = 'sky';
       } else {
         axeButton3.style.background = 'red';
@@ -137,3 +143,10 @@ gameBoard.addEventListener('click', (e) => {
       break;
   }
 });
+// holder.addEventListener('click', () => {
+//   gameBoard.addEventListener('click', (e) => {
+//     e.target.classList = '';
+//     e.target.classList.add(holder.classList);
+//   });
+//   holder.classList = '';
+// });
