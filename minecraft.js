@@ -3,7 +3,7 @@ const shovelButton1 = document.querySelector('.button1');
 const pickaxeButton2 = document.querySelector('.button2');
 const axeButton3 = document.querySelector('.button3');
 const holder = document.querySelector('#holder1');
-
+// let holderStatus;
 const gameBoardMatrix = [
   //18*18
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -74,15 +74,10 @@ const objTools = {
   shovel: { className: ['ground', 'grass'] },
   pickaxe: { className: 'rock' },
   axe: { className: ['tree', 'leaves'] },
+  holder: { className: '' },
 };
 
-// console.log(objTools.shovel.className[1]);
-// console.log(objTools.shovel.className[1]);
 shovelButton1.classList.add(objTools.shovel.className);
-// console.log(shovelButton1.classList);
-// console.log(shovelButton1.className);
-
-//we get in to the button classlist and we add class from the objtool obj
 pickaxeButton2.classList.add(objTools.pickaxe.className);
 axeButton3.classList.add(objTools.axe.className);
 
@@ -107,24 +102,32 @@ axeButton3.addEventListener('click', () => {
   pickaxeButton2.style.background = '';
   myTools = 'axe';
 });
-// console.log(shovelButton1.className);
+
+holder.addEventListener('click', () => {
+  myTools = 'holder';
+  console.log(myTools);
+});
 
 gameBoard.addEventListener('click', (e) => {
+
   switch (myTools) {
     case 'shovel':
-      if (shovelButton1.className.includes(e.target.className)) {
-        holder.classList = ' ';
-        // holder.classList.add(e.target.className);
-        holder.setAttribute('class', e.target.className);
-        e.target.classList = 'sky';
+      if (shovelButton1.className.includes(e.target.className)) { 
+        holder.className = e.target.className;
+        e.target.className = 'sky';
       } else {
         shovelButton1.style.background = 'red';
       }
       break;
+    case 'holder':
+      e.target.className = holder.className;
+      holder.className = '';
+      myTools = '';
+      break;
     case 'pickaxe':
       if (pickaxeButton2.className.includes(e.target.className)) {
-        holder.classList = ' ';
         holder.setAttribute('class', e.target.className);
+        console.log(holder.classList);
         e.target.classList = 'sky';
       } else {
         pickaxeButton2.style.background = 'red';
@@ -132,10 +135,7 @@ gameBoard.addEventListener('click', (e) => {
       break;
     case 'axe':
       if (axeButton3.className.includes(e.target.className)) {
-        holder.classList = ' ';
         holder.setAttribute('class', e.target.className);
-        console.log(holder.classlist);
-        // holder.classList.add(e.target.className);
         e.target.classList = 'sky';
       } else {
         axeButton3.style.background = 'red';
@@ -143,10 +143,4 @@ gameBoard.addEventListener('click', (e) => {
       break;
   }
 });
-// holder.addEventListener('click', () => {
-//   gameBoard.addEventListener('click', (e) => {
-//     e.target.classList = '';
-//     e.target.classList.add(holder.classList);
-//   });
-//   holder.classList = '';
-// });
+

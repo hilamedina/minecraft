@@ -22,4 +22,29 @@
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(18, 1fr);
+ 
   }
+
+  .yellowBrick {
+    background: url("/images/yellow-Brick.jpeg");
+  }
+  .sky{
+    background-color:wheat;
+  }
+  .redheart{
+    background: url("/images/redheart.jpeg");  
+  }
+  .yellowheart {
+    background: url("/images/yellowheart.jpeg");
+  }
+  .grayheart {
+    background: url("/images/grayheart.jpeg");
+  }
+  .greenBrick{
+    background: url("/images/greenBrick.jpeg");
+  }
+  .grass {
+    background: url("/images/grasswithgrass.jpeg");
+    /* background: url("/images/css_sprites.png") -10px -10px; */
+  }
+  
