@@ -41,21 +41,7 @@ body {
     display:flex;
     margin-left:10%;
   } 
-   /* .next{
-    display:flex;
-     justify-content; 
-    align-items: center;
-    background-color: black;
-    border:none;
-    height:15px;
-    padding:20px;
-    color:white;
-    cursor: pointer;
-    font-family: "Minecraft", sans-serif;
-    font-size: 20px;
-    border:0.5px solid white;
-    border-radius: 15%;
-  }   */
+  
 
   #holder1{
     width:15px;
