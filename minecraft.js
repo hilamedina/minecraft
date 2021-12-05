@@ -74,7 +74,6 @@ const objTools = {
   shovel: { className: ['ground', 'grass'] },
   pickaxe: { className: 'rock' },
   axe: { className: ['tree', 'leaves'] },
-  // holder: { className: '' },
 };
 
 shovelButton1.classList.add(objTools.shovel.className);

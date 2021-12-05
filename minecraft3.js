@@ -1,4 +1,7 @@
 const gameBoard2 = document.querySelector('#game-board2');
+const shovelButton1 = document.querySelector('.button1');
+const pickaxeButton2 = document.querySelector('.button2');
+const axeButton3 = document.querySelector('.button3');
 
 const gameBoardMatrix2 = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -60,3 +63,11 @@ gameBoardMatrix2.forEach((row, yIndex) => {
     gameBoard2.appendChild(block);
   });
 });
+const objTools = {
+  shovel: { className: ['grayheart', 'greenBrick'] },
+  pickaxe: { className: 'grayheart' },
+  axe: { className: ['yellowBrick', 'redheart'] },
+};
+shovelButton1.classList.add(objTools.shovel.className);
+pickaxeButton2.classList.add(objTools.pickaxe.className);
+axeButton3.classList.add(objTools.axe.className);

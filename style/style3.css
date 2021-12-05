@@ -47,4 +47,30 @@
     background: url("/images/grasswithgrass.jpeg");
 
   }
+  .button1{
+    background:black;
+    width: 120px;
+    height: 120px;
+    border:none;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .button2{
+    background:black;
+    width: 120px;
+    height: 120px;
+    border:none;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .button3{
+      background:black;
+      width: 120px;
+      height: 120px;
+      border:none;
+      display: flex;
+      flex-direction: column;
+    } 
   
