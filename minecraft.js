@@ -74,7 +74,7 @@ const objTools = {
   shovel: { className: ['ground', 'grass'] },
   pickaxe: { className: 'rock' },
   axe: { className: ['tree', 'leaves'] },
-  holder: { className: '' },
+  // holder: { className: '' },
 };
 
 shovelButton1.classList.add(objTools.shovel.className);
@@ -105,14 +105,12 @@ axeButton3.addEventListener('click', () => {
 
 holder.addEventListener('click', () => {
   myTools = 'holder';
-  console.log(myTools);
 });
 
 gameBoard.addEventListener('click', (e) => {
-
   switch (myTools) {
     case 'shovel':
-      if (shovelButton1.className.includes(e.target.className)) { 
+      if (shovelButton1.className.includes(e.target.className)) {
         holder.className = e.target.className;
         e.target.className = 'sky';
       } else {
@@ -141,6 +139,8 @@ gameBoard.addEventListener('click', (e) => {
         axeButton3.style.background = 'red';
       }
       break;
+    case 'holder':
+      e.target.className = holder.className;
+      holder.className = '';
   }
 });
-
